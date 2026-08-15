@@ -30,6 +30,7 @@ Costo Base * m2 * fm = precio
 
 - [Etapa 1](#etapa1)
 - [Etapa 2](#/etapa2)
+- [Etapa 3](#/etapa3)
 
 ---
 
@@ -54,5 +55,22 @@ Pasos en JS:
 4. validar que fm: posea valor superior a 1.000 y que los metros cuadrados del prompt se puedan convertir a un entero
 5. si todo sale bien mostrar el resultado con console.log
 6. si algo sale mal mostrar console.warn
+
+---
+
+### Etapa 3 {#etapa3}
+
+Pasos en JS:
+
+1. Crear archivo "variables.js" que contenga 2 arrays  
+    1.1. datosUbicacion = opciones de ubicaciones con sus fm  
+    1.2. datosPropiedad = opciones de propiedades con sus fm  
+2. Conectar variables.js al index.html para que todo sea mismo entorno  
+    2.1. usa prompt() para solicitar al usuario que ingrese que vivienda es  
+    2.2. Con la opcion de la vivienda, itera sobre el array buscando el factor que le corresponde  
+    2.3. Al conseguir el correcto, toma el objeto guardandolo en fmPropiedad  
+3. Repetir para ubicacion, guardando en fmUbicacion
+4. Modificar if() que verifica los datos (fm , metros cuadrados)
+5. Calcular el monto de la poliza ahora usando ambos factores (fmUbicacion, fmPropiedad)
 
 ---
