@@ -29,6 +29,7 @@ Costo Base * m2 * fm = precio
 ### Indice
 
 - [Etapa 1](#etapa1)
+- [Etapa 2](#/etapa2)
 
 ---
 
@@ -40,5 +41,18 @@ Pasos en JS:
 2. Declarar variable donde ingresar total de metros cuadrados. usar prompt para ingresar
 3. Definir un factor multiplicador fm
 4. Mostrar en cuadro alert() el monto total de la poliza multiplicando los 3 valores predeterminados
+
+---
+
+### Etapa 2 {#etapa2}
+
+Pasos en JS:
+
+1. Solicitar al usuario que ingrese tipo de vivienda a traves de un prompt()
+2. usar un Switch() para validar el dato ingresado y asignar valor a la variable fm 
+3. calcular el monto total
+4. validar que fm: posea valor superior a 1.000 y que los metros cuadrados del prompt se puedan convertir a un entero
+5. si todo sale bien mostrar el resultado con console.log
+6. si algo sale mal mostrar console.warn
 
 ---
