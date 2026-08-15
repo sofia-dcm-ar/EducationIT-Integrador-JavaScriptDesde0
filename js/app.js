@@ -144,7 +144,7 @@ else{
 //#endregion
 
 //#region Etapa 4
-const costoBase = 1.16
+/* const costoBase = 1.16
 
 let ubicacionHtml = document.getElementById("ubicacion")
 let propiedadHtml = document.getElementById("propiedad")
@@ -193,6 +193,76 @@ let fmUbicacion
 function factoresMultiplicadores(){
     fmPropiedad = propiedadHtml.value 
     fmUbicacion = ubicacionHtml.value
-} 
+} */
 
+//#endregion
+
+//#region Etapa 5
+const costoBase = 1.16
+
+let divHtml = document.getElementById("div")
+
+let ubicacionHtml = document.getElementById("ubicacion")
+let propiedadHtml = document.getElementById("propiedad")
+
+let polizaHtml = document.getElementById("valorPoliza")
+
+function cargarComboPropiedad(){
+    propiedadHtml.innerHTML = `<option selected disabled>...</option>`
+    for(var propiedad of datosPropiedad){
+        propiedadHtml.innerHTML += `<option value= ${propiedad.factor} > ${propiedad.tipo} </option>`
+    }
+}
+function cargarComboUbicacion(){
+    ubicacionHtml.innerHTML = `<option selected disabled>...</option>`
+    for(var ubicacion of datosUbicacion){
+        ubicacionHtml.innerHTML += `<option value=${ubicacion.factor}>${ubicacion.tipo}</option>`
+    }
+}
+cargarComboPropiedad()
+cargarComboUbicacion()
+
+let metrosHtml 
+
+let btnCotizar = document.getElementById("cotizar")
+btnCotizar.onclick = function(){
+    divHtml.classList.add("div-blocked")
+    btnCotizar.innerHTML = `<img src="/images/animation.gif">`
+
+    setTimeout(() => {
+        let poliza = calcularPoliza()
+        if(poliza == -1){
+            alert("Datos mal ingresados")
+        } else {
+            polizaHtml.innerHTML = poliza.toFixed(2)
+        }
+
+        btnCotizar.innerHTML = "Cotizar"
+        divHtml.classList.remove("div-blocked")
+    }, 5000) 
+}
+
+let fmPropiedad
+let fmUbicacion
+
+function factoresMultiplicadores(){
+    fmPropiedad = propiedadHtml.value 
+    fmUbicacion = ubicacionHtml.value
+}
+
+function calcularPoliza(){
+    metrosHtml = document.getElementById("metros2")
+    let metrosCuadrados = Number(metrosHtml.value)
+    factoresMultiplicadores()
+
+    console.log(metrosCuadrados)
+    if( fmUbicacion > 1.000 && fmPropiedad > 1.000 && !isNaN(metrosCuadrados) && metrosCuadrados != null && metrosCuadrados % 1 === 0){
+        var total = costoBase * metrosCuadrados * fmUbicacion * fmPropiedad
+        return total
+    }   
+    else{
+        console.warn("Hubo un error al ingresar de datos")
+        return -1
+    } 
+}
 //#endregion

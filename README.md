@@ -88,3 +88,15 @@ Pasos en JS:
 6. Formatear resultado de la poliza en 2 decimales
 
 ---
+
+### Etapa 5 {#etapa5}
+
+Pasos en JS:
+
+1. Desde js imprimir el resultado de la poliza en el span correspondiente
+2. Asignar clase de bloqueo al div del formulario para evitar mas consultas durante el computo
+3. Implementar settimeout() para retrasar la siguiente solicitud (simula backend)  
+    3.1. aplicar gif de carga a boton  
+    3.2. tiene dentro la logica de calculo de poliza  
+4. Restaurar palabra "Cotizar" al boton
+5. Quitar clase de bloqueo al div
