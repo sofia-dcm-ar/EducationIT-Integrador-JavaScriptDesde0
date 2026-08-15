@@ -28,15 +28,15 @@ Costo Base * m2 * fm = precio
 
 ### Indice
 
-- [Etapa 1](#etapa1)
-- [Etapa 2](#/etapa2)
-- [Etapa 3](#/etapa3)
-- [Etapa 4](#/etapa4)
-- [Etapa 5](#/etapa5)
-
+- Etapa 1
+- Etapa 2
+- Etapa 3
+- Etapa 4
+- Etapa 5
+  
 ---
 
-### Etapa 1 {#etapa1}
+### Etapa 1 
 
 Pasos en JS:
 
@@ -47,7 +47,7 @@ Pasos en JS:
 
 ---
 
-### Etapa 2 {#etapa2}
+### Etapa 2
 
 Pasos en JS:
 
@@ -60,7 +60,7 @@ Pasos en JS:
 
 ---
 
-### Etapa 3 {#etapa3}
+### Etapa 3
 
 Pasos en JS:
 
@@ -77,7 +77,7 @@ Pasos en JS:
 
 ---
 
-### Etapa 4 {#etapa4}
+### Etapa 4 
 
 Pasos en JS:
 
@@ -90,7 +90,7 @@ Pasos en JS:
 
 ---
 
-### Etapa 5 {#etapa5}
+### Etapa 5 
 
 Pasos en JS:
 
