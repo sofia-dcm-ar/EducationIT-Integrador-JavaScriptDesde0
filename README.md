@@ -31,6 +31,7 @@ Costo Base * m2 * fm = precio
 - [Etapa 1](#etapa1)
 - [Etapa 2](#/etapa2)
 - [Etapa 3](#/etapa3)
+- [Etapa 4](#/etapa4)
 
 ---
 
@@ -72,5 +73,18 @@ Pasos en JS:
 3. Repetir para ubicacion, guardando en fmUbicacion
 4. Modificar if() que verifica los datos (fm , metros cuadrados)
 5. Calcular el monto de la poliza ahora usando ambos factores (fmUbicacion, fmPropiedad)
+
+---
+
+### Etapa 4 {#etapa4}
+
+Pasos en JS:
+
+1. Conectar los combo select del html con el js para presentar el contenido del desplegable dinamicamente
+2. Crear funciones que carguen dinamicamente las opciones desplegables
+3. Tomar los metros cuadrados desde el input
+4. Crear funcion que recorra los array ubicando los valores fm segun las opciones seleccionadas
+5. Tomar el boton cotizar, asignr evento de click
+6. Formatear resultado de la poliza en 2 decimales
 
 ---

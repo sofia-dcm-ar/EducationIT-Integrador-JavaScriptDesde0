@@ -51,7 +51,7 @@ else{
 //#endregion
 
 //#region Etapa 3
-const costoBase = 1.16
+/* const costoBase = 1.16
 
 let metrosCuadrados = Number(prompt("Ingrese cantidad de metros cuadrados"))
 
@@ -140,5 +140,59 @@ if( fmUbicacion.factor > 1.000 && fmPropiedad.factor > 1.000 && !isNaN(metrosCua
 }
 else{
     console.warn("Hubo un error al ingresar de datos")
+}  */
+//#endregion
+
+//#region Etapa 4
+const costoBase = 1.16
+
+let ubicacionHtml = document.getElementById("ubicacion")
+let propiedadHtml = document.getElementById("propiedad")
+
+let polizaHtml = document.getElementById("valorPoliza")
+
+function cargarComboPropiedad(){
+    propiedadHtml.innerHTML = `<option selected disabled>...</option>`
+    for(var propiedad of datosPropiedad){
+        propiedadHtml.innerHTML += `<option value= ${propiedad.factor} > ${propiedad.tipo} </option>`
+    }
+}
+function cargarComboUbicacion(){
+    ubicacionHtml.innerHTML = `<option selected disabled>...</option>`
+    for(var ubicacion of datosUbicacion){
+        ubicacionHtml.innerHTML += `<option value=${ubicacion.factor}>${ubicacion.tipo}</option>`
+    }
+}
+cargarComboPropiedad()
+cargarComboUbicacion()
+
+let metrosHtml 
+
+let btnCotizar = document.getElementById("cotizar")
+btnCotizar.onclick = function(){
+    metrosHtml = document.getElementById("metros2")
+    let metrosCuadrados = Number(metrosHtml.value)
+    factoresMultiplicadores()
+
+    console.log(metrosCuadrados)
+    if( fmUbicacion > 1.000 && fmPropiedad > 1.000 && !isNaN(metrosCuadrados) && metrosCuadrados != null && metrosCuadrados % 1 === 0){
+        var total = costoBase * metrosCuadrados * fmUbicacion * fmPropiedad
+        console.log("monto total de la poliza: " + total)
+        polizaHtml.innerHTML = total.toFixed(2)
+        
+    }   
+    else{
+        console.warn("Hubo un error al ingresar de datos")
+        console.log(fm)
+    } 
+}
+
+let fmPropiedad
+let fmUbicacion
+
+function factoresMultiplicadores(){
+    fmPropiedad = propiedadHtml.value 
+    fmUbicacion = ubicacionHtml.value
 } 
+
 //#endregion
