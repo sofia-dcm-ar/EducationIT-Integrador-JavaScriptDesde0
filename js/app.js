@@ -227,7 +227,7 @@ let metrosHtml
 let btnCotizar = document.getElementById("cotizar")
 btnCotizar.onclick = function(){
     divHtml.classList.add("div-blocked")
-    btnCotizar.innerHTML = `<img src="/images/animation.gif">`
+    btnCotizar.innerHTML = `<img src="images/animation.gif">`
 
     setTimeout(() => {
         let poliza = calcularPoliza()
