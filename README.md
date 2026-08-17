@@ -28,14 +28,15 @@ Costo Base * m2 * fm = precio
 
 ### Indice
 
-- [Etapa 1](#etapa1)
-- [Etapa 2](#/etapa2)
-- [Etapa 3](#/etapa3)
-- [Etapa 4](#/etapa4)
-
+- Etapa 1
+- Etapa 2
+- Etapa 3
+- Etapa 4
+- Etapa 5
+  
 ---
 
-### Etapa 1 {#etapa1}
+### Etapa 1 
 
 Pasos en JS:
 
@@ -46,7 +47,9 @@ Pasos en JS:
 
 ---
 
-### Etapa 2 {#etapa2}
+### Etapa 2
+Aplicar controles, modificar codigo de la etapa 1  
+Ahora fm debe ser dinamico, ingresado por el value de las option del select de la propedad y el select de ubicacion
 
 Pasos en JS:
 
@@ -59,7 +62,8 @@ Pasos en JS:
 
 ---
 
-### Etapa 3 {#etapa3}
+### Etapa 3
+Ahora implementamos arrays, iteramos buscando coincidencia, validamos datos, implementamos fm de propiedad y de ubicacion  
 
 Pasos en JS:
 
@@ -76,7 +80,8 @@ Pasos en JS:
 
 ---
 
-### Etapa 4 {#etapa4}
+### Etapa 4 
+Reemplazar contenido estatico, conectar al Html, integracion de funciones  
 
 Pasos en JS:
 
@@ -89,7 +94,8 @@ Pasos en JS:
 
 ---
 
-### Etapa 5 {#etapa5}
+### Etapa 5 
+Mostrar el resultado del calculo de la poliza y simular tiempo de computo  
 
 Pasos en JS:
 
